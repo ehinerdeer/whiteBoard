@@ -1,8 +1,7 @@
 *  These are questions found on the web to practice
 *  doing white board problems for interviews.
 *  Each function should be commented with time complexity
-*  using Big\cf3 -\cf2 O notation. Have Fun! 
-
+*  using Big O notation. Have Fun! 
 
 
 * Question 1 - Write a function to find the missing number 
@@ -10,19 +9,34 @@
 * built in comparison functions.
 * Example: Array1 = {4, 12, 6, 8, 20}
 * Array2 = {4, 8, 20, 12}
-* Function should return 6 as the missing number */
+* Function should return 6 as the missing number 
 
 * Question 2 - Find a duplicate number in a given array 
-* Example: Array = \{3, 6, 10, 11, 21, 3, 4, 2, 15\}
-* Your function should return 3 */\
+* Example: Array = {3, 6, 10, 11, 21, 3, 4, 2, 15}
+* Your function should return 3 
 
 * Question 2 Bonus - Find multiple duplicates and return them to be printed
 * NOTE: the values are guaranteed to be 1-100 so anything outside should not
 * be printed or returned */
 
 * Question 3 - Find the largest and smallest number in an unsorted array 
-* of values 1-100\cf0 \
+* of values 1-100
 * NOTE: Sorting the array is not allowed */
 
 * Question 4 - Reverse an array of integers without using a built in
 * reverse function from Java library. */
+
+* Question 5 - Remove duplicate items from an array in Java
+
+* Question 6 - Find the middle element of a singly linked list
+
+* Question 7 - Reverse the elements of a string without using any built-in 
+* reverse functions.
+
+* Question 8 - Reverse the string using recursion without using any built-in
+* reverse functions.
+
+* Question 9 - Reverse the words in a sentence string without using any
+* built-in reverse functions. 
+
+* Question 10 - Make a palindrome checker for a given word / string. Returns T/F
