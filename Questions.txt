@@ -26,7 +26,7 @@
 * Question 4 - Reverse an array of integers without using a built in
 * reverse function from Java library. */
 
-* Question 5 - Remove duplicate items from an array in Java
+* Question 5 - Remove duplicate items from an array
 
 * Question 6 - Find the middle element of a singly linked list
 
