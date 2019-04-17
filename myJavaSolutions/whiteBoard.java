@@ -21,7 +21,10 @@ public class whiteBoard {
 		int[] array3 = {3, 6, 10, 11, 21, 3, 4, 2, 15};
 		int[] array4 = {3, 6, 10, 11, 21, 3, 4, 2, 15, 4, 11, 10};
 		int[] array5 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		int[] array6 = {3, 6, 10, 11, 21, 3, 4, 2, 15, 4, 11, 10};
+		int[] array7 = {3, 6, 10, 11, 21, 3, 4, 2, 15, 4, 11, 10};
 		int[] reverse = reverseArray(array5);
+		
 		System.out.println("Answer: " + missingNum1(array1, array2));
 		System.out.println("Answer: " + missingNumXOR(array1, array2));
 		System.out.println("Answer: " + duplicateNum(array3));
@@ -36,6 +39,28 @@ public class whiteBoard {
 		System.out.print("Reverse: ");
 		for(int k = 0; k < reverse.length; k++) {
 			System.out.print(reverse[k] + " ");
+		}
+		System.out.println("");
+		System.out.print("Array: ");
+		for(int i = 0; i < array6.length; i++) {
+			System.out.print(array6[i] + " ");
+		}
+		int[] removeDups = removeDupsSort(array6);
+		System.out.println("");
+		System.out.print("Remove Dups: ");
+		for(int k = 0; k < removeDups.length; k++) {
+			System.out.print(removeDups[k] + " ");
+		}
+		System.out.println("");
+		System.out.print("Array: ");
+		for(int i = 0; i < array7.length; i++) {
+			System.out.print(array7[i] + " ");
+		}
+		int[] removeDupsNoSort = removeDupsNoSort(array7);
+		System.out.println("");
+		System.out.print("Remove Dups: ");
+		for(int k = 0; k < removeDupsNoSort.length; k++) {
+			System.out.print(removeDupsNoSort[k] + " ");
 		}
 	}
 
@@ -157,8 +182,78 @@ public class whiteBoard {
 		
 		return answer;
 	}
+	
+	/* Question 5 - Remove duplicate items from an array 
+	 * NOTE: This version sorts the final answer */
+	public static int[] removeDupsSort(int[] array) {
+		int source = 1;
+		int dest = 0;
+		int count = 0;
+		Arrays.sort(array);
+		 
+		for(int i = 0; i < array.length; i++) {
+			if(source != array.length ) {
+				if(array[dest] == array[source]) {
+					count++;
+					source++;
+					dest++;
+					array[dest] = 0;
+				} else {
+					source++;
+					dest++;
+				}
+			} 
+		}
+		
+		int[] answer = new int[array.length - count];
+		dest = 0;
+		
+		for(int i = 0; i < array.length; i++) {
+			if(array[i] != 0) {
+				answer[dest] = array[i];
+				dest++;
+			}
+		}
+		
+		return answer;
+	}
+	
+	/* Question 5 - removing duplicates without sorting the array 
+	 * 
+	 * NOTE : NOT FINISHED */
+	public static int[] removeDupsNoSort(int[] array) {
+		int dest = 0;
+		int count = 0;
+		
+		while(dest < array.length) {
+			int source = 1;
+			if(source != array.length) {
+			for(int i = 0; i < array.length; i++) {
+				if(array[dest] == array[i]) {
+					array[dest] = 0;
+					count++;
+				}
+				source++;
+			}
+			dest++;
+			}
+		}
+		
+		int[] answer = new int[array.length - count];
+		dest = 0;
+		for(int k = 0; k < array.length; k++) {
+			if(array[k] != 0) {
+				answer[dest] = array[k];
+				dest++;
+			}
+		}
+		
+		return answer;
+	}
+	
 }
 
+	
 	
 
 
