@@ -9,6 +9,9 @@ import java.util.Arrays;
 /**
  * @author ehinerdeer
  *
+ * NOTE: Mostly the extra work in the functions is to have them print out.
+ * If returning an array change the function to int[] and return the array instead
+ * of making it into a string to print. 
  */
 public class whiteBoard {
 
