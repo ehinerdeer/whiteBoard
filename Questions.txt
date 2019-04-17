@@ -40,3 +40,10 @@
 * built-in reverse functions. 
 
 * Question 10 - Make a palindrome checker for a given word / string. Returns T/F
+
+* Question 11 - Write a function to reverse a singly linked list
+
+* Question 12 - Write a function to search an array of integers as if it were a 
+* binary tree
+
+
